@@ -1,0 +1,212 @@
+
+/* =========================
+   Impostazioni generali
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.giorno {
+    background-color: white;
+    color: black;
+}
+
+.notte {
+    background-color: black;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* =========================
+   Intestazione
+   ========================= */
+
+header,
+footer {
+    background-color: rgb(86, 109, 143);
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* =========================
+   Pulsante giorno/notte
+   ========================= */
+
+.switch {
+    text-align: right;
+    margin: 10px 0;
+}
+
+#cambio {
+    background-color: rgb(72, 107, 72);
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+#cambio:hover {
+    background-color: chartreuse;
+    color: black;
+    box-shadow: 0 0 15px 5px rgba(108, 47, 65, 0.6);
+}
+
+/* =========================
+   Campi di inserimento e ricerca
+   ========================= */
+
+.campiRicerca {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.newLibri,
+.ricerca {
+    width: 300px;
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 4px #6D4900;
+}
+
+/* =========================
+   Filtri
+   ========================= */
+
+.filtro {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.filtro button {
+    width: 130px;
+    margin: 5px 15px;
+    padding: 8px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 4px #1C0100;
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.filtro button.attivo {
+    background-color: rgb(72, 107, 72);
+    color: white;
+    border: 2px solid black;
+    box-shadow: 0 0 0 3px gold;
+    font-weight: bold;
+}
+
+/* =========================
+   Lista dei libri
+   ========================= */
+
+.areaLibri {
+    margin: 20px 0 30px;
+    overflow: auto;
+}
+
+.listaLibri {
+    float: left;
+    width: calc(100% - 220px);
+}
+
+.listaLibri > div {
+    min-height: 40px;
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow-wrap: anywhere;
+}
+
+.listaLibri span {
+    display: inline-block;
+    min-width: 200px;
+    margin: 5px;
+    padding: 5px;
+    border-left: 1px solid black;
+    border-radius: 3px;
+    font-size: 18px;
+}
+
+/* Bordo personalizzabile dei libri letti */
+.listaLibri .libro-letto span {
+    border-left: 5px solid;
+}
+
+.listaLibri button {
+    margin: 5px;
+    padding: 6px 10px;
+}
+
+/* =========================
+   Contatore e barra di avanzamento
+   ========================= */
+
+.riepilogo {
+    float: right;
+    width: 180px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.contatore {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contenitoreBarre {
+    width: 100%;
+    height: 22px;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.barraE {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.barraI {
+    width: 0%;
+    height: 100%;
+    background-color: gold;
+    transition: width 0.3s ease;
+}
+
+.percentualeLettura {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* =========================
+   Piè di pagina
+   ========================= */
+
+footer {
+    clear: both;
+    margin-top: 30px;
+}

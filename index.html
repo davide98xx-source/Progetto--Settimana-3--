@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mycss.css">
+    <title>Catalogazione dei libri</title>
+</head>
+
+<body class="giorno">
+    <header>
+        <h1 class="title">Catalogazione dei libri</h1>
+    </header>
+
+    <main class="contenitore">
+        <div class="switch">
+            <button id="cambio">Giorno/Notte</button>
+        </div>
+
+        <section class="form">
+            <div class="campiRicerca">
+                <input
+                    type="text"
+                    class="newLibri"
+                    placeholder="Nuovo libro"
+                    aria-label="Inserisci un nuovo libro"
+                >
+
+                <input
+                    type="text"
+                    class="ricerca"
+                    placeholder="Cerca il libro"
+                    aria-label="Cerca un libro"
+                >
+            </div>
+
+            <div class="filtro">
+                <button class="tutti">Tutti</button>
+                <button class="leggere">Da leggere</button>
+                <button class="letti">Letti</button>
+            </div>
+
+            <div class="areaLibri">
+                <div class="listaLibri"></div>
+
+                <aside class="riepilogo">
+                    <div class="contatore">
+                        Totale libri:
+                        <span id="numeroLibri">0</span>
+                    </div>
+
+                    <div
+                        class="contenitoreBarre"
+                        role="progressbar"
+                        aria-label="Percentuale dei libri letti"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="0"
+                    >
+                        <div class="barraE">
+                            <div class="barraI"></div>
+                        </div>
+                    </div>
+
+                    <p class="percentualeLettura">Libri letti: 0%</p>
+                </aside>
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                Si ringraziano tutti gli scrittori e le scrittrici
+                che hanno reso disponibili i loro libri in versione digitale.
+            </p>
+        </footer>
+    </main>
+
+    <script src="java.js"></script>
+</body>
+</html>
